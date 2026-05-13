@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Brisa Sense</title>
+
+<style>
+
+body{
+background:#000;
+font-family:Arial;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+margin:0;
+color:white;
+}
+
+.box{
+width:320px;
+background:#111;
+padding:20px;
+border-radius:25px;
+border:2px solid #00ff66;
+box-shadow:0 0 20px #00ff66;
+}
+
+h1{
+text-align:center;
+color:white;
+}
+
+button{
+width:100%;
+padding:15px;
+border:none;
+border-radius:15px;
+background:#00ff66;
+color:black;
+font-weight:bold;
+font-size:18px;
+margin-bottom:20px;
+}
+
+.item{
+background:#1b1b1b;
+padding:12px;
+margin-top:10px;
+border-radius:12px;
+display:flex;
+justify-content:space-between;
+}
+
+.copy{
+text-align:center;
+color:#00ff66;
+font-size:13px;
+margin-bottom:15px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="box">
+
+<h1>BRISA SENSE</h1>
+
+<div class="copy">
+✨ Copia automaticamente
+</div>
+
+<button onclick="gerar()">
+GERAR SENSI 🔥
+</button>
+
+<div class="item">
+<span>Geral</span>
+<span id="geral">---</span>
+</div>
+
+<div class="item">
+<span>Ponto Vermelho</span>
+<span id="red">---</span>
+</div>
+
+<div class="item">
+<span>Mira 2x</span>
+<span id="x2">---</span>
+</div>
+
+<div class="item">
+<span>Mira 4x</span>
+<span id="x4">---</span>
+</div>
+
+<div class="item">
+<span>AWM</span>
+<span id="awm">---</span>
+</div>
+
+<div class="item">
+<span>Botão</span>
+<span id="botao">---</span>
+</div>
+
+</div>
+
+<script>
+
+function gerar(){
+
+let geral = Math.floor(Math.random()*200)
+let red = Math.floor(Math.random()*180)
+let x2 = Math.floor(Math.random()*170)
+let x4 = Math.floor(Math.random()*160)
+let awm = Math.floor(Math.random()*100)
+let botao = Math.floor(Math.random()*80)
+
+document.getElementById('geral').innerHTML = geral
+document.getElementById('red').innerHTML = red
+document.getElementById('x2').innerHTML = x2
+document.getElementById('x4').innerHTML = x4
+document.getElementById('awm').innerHTML = awm
+document.getElementById('botao').innerHTML = botao + '%'
+
+let texto =
+`🎯 BRISA SENSE
+
+Geral: ${geral}
+Ponto Vermelho: ${red}
+Mira 2x: ${x2}
+Mira 4x: ${x4}
+AWM: ${awm}
+Botão: ${botao}%`
+
+navigator.clipboard.writeText(texto)
+
+}
+
+</script>
+
+</body>
+</html>
