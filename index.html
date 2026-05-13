@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Brisa Sense</title>
+
+<style>
+
+body{
+background:#000;
+font-family:Arial;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+margin:0;
+color:white;
+}
+
+.box{
+width:320px;
+background:#111;
+padding:20px;
+border-radius:25px;
+border:2px solid #00ff66;
+box-shadow:0 0 20px #00ff66;
+}
+
+h1{
+text-align:center;
+color:white;
+}
+
+button{
+width:100%;
+padding:15px;
+border:none;
+border-radius:15px;
+background:#00ff66;
+color:black;
+font-weight:bold;
+font-size:18px;
+margin-bottom:20px;
+}
+
+.item{
+background:#1b1b1b;
+padding:12px;
+margin-top:10px;
+border-radius:12px;
+display:flex;
+justify-content:space-between;
+}
+
+.copy{
+text-align:center;
+color:#00ff66;
+font-size:13px;
+margin-bottom:15px;
+}
+input{
+width:100%;
+padding:14px;
+margin-top:10px;
+margin-bottom:10px;
+border:none;
+border-radius:12px;
+background:#1b1b1b;
+color:white;
+font-size:16px;
+box-sizing:border-box;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+
+<h1>BRISA SENSE</h1>
+
+<div class="copy">
+✨ Copia automaticamente
+</div>
+<input type="number" id="dpi" placeholder="Digite sua DPI">
+
+<input type="text" id="tela" placeholder="Polegadas da Tela">
+
+<input type="text" id="modelo" placeholder="Modelo do Celular">
+
+<button onclick="gerar()">
+GERAR SENSI 🔥
+</button>
+
+<div class="item">
+<span>Geral</span>
+<span id="geral">---</span>
+</div>
+
+<div class="item">
+<span>Ponto Vermelho</span>
+<span id="red">---</span>
+</div>
+
+<div class="item">
+<span>Mira 2x</span>
+<span id="x2">---</span>
+</div>
+
+<div class="item">
+<span>Mira 4x</span>
+<span id="x4">---</span>
+</div>
+
+<div class="item">
+<span>AWM</span>
+<span id="awm">---</span>
+</div>
+
+<div class="item">
+<span>Botão</span>
+<span id="botao">---</span>
+</div>
+
+</div>
+
+<script>
+
+function gerar(){
+
+let dpi = document.getElementById('dpi').value
+
+let geral = 150
+let red = 140
+let x2 = 130
+let x4 = 120
+let awm = 60
+let botao = 65
+
+if(dpi >= 600){
+
+geral = 190
+red = 180
+x2 = 170
+x4 = 160
+awm = 80
+botao = 55
+
+}
+
+document.getElementById('geral').innerHTML = geral
+document.getElementById('red').innerHTML = red
+document.getElementById('x2').innerHTML = x2
+document.getElementById('x4').innerHTML = x4
+document.getElementById('awm').innerHTML = awm
+document.getElementById('botao').innerHTML = botao + '%'
+
+}
+
+
+
+</script>
+
+</body>
+</html>
