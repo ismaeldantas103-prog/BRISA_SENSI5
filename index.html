@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Brisa Sense</title>
+  <style>
+    body{
+      background:#000;
+      color:white;
+      font-family:Arial;
+      text-align:center;
+      padding:20px;
+    }
+
+    .box{
+      background:#111;
+      border:2px solid #00ff66;
+      border-radius:20px;
+      padding:20px;
+      max-width:400px;
+      margin:auto;
+    }
+
+    button{
+      background:#00ff66;
+      color:black;
+      border:none;
+      padding:15px;
+      width:100%;
+      border-radius:15px;
+      font-size:20px;
+      font-weight:bold;
+    }
+
+    .item{
+      background:#1a1a1a;
+      margin-top:10px;
+      padding:15px;
+      border-radius:10px;
+      display:flex;
+      justify-content:space-between;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="box">
+  <h1>BRISA SENSE</h1>
+
+  <button onclick="gerar()">
+    GERAR SENSI
+  </button>
+
+  <div class="item">
+    <span>Geral</span>
+    <span id="geral">---</span>
+  </div>
+
+  <div class="item">
+    <span>Ponto Vermelho</span>
+    <span id="red">---</span>
+  </div>
+
+  <div class="item">
+    <span>Mira 2x</span>
+    <span id="x2">---</span>
+  </div>
+
+  <div class="item">
+    <span>Mira 4x</span>
+    <span id="x4">---</span>
+  </div>
+
+  <div class="item">
+    <span>AWM</span>
+    <span id="awm">---</span>
+  </div>
+
+  <div class="item">
+    <span>Botão</span>
+    <span id="botao">---</span>
+  </div>
+</div>
+
+<script>
+function gerar(){
+
+document.getElementById('geral').innerHTML =
+Math.floor(Math.random()*200)
+
+document.getElementById('red').innerHTML =
+Math.floor(Math.random()*180)
+
+document.getElementById('x2').innerHTML =
+Math.floor(Math.random()*170)
+
+document.getElementById('x4').innerHTML =
+Math.floor(Math.random()*160)
+
+document.getElementById('awm').innerHTML =
+Math.floor(Math.random()*100)
+
+document.getElementById('botao').innerHTML =
+Math.floor(Math.random()*80) + '%'
+
+}
+</script>
+
+</body>
+</html>
