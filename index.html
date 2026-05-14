@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>BRISA SENSE FREE</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
+}
+
+body{
+background:#000;
+display:flex;
+justify-content:center;
+padding:25px;
+color:white;
+}
+
+.container{
+width:100%;
+max-width:420px;
+background:#050505;
+border:2px solid #00ff66;
+border-radius:35px;
+padding:30px 22px;
+box-shadow:0 0 30px #00ff66;
+}
+
+.logo{
+width:70px;
+height:70px;
+border-radius:20px;
+display:block;
+margin:0 auto 15px;
+object-fit:cover;
+border:2px solid #00ff66;
+}
+
+h1{
+text-align:center;
+font-size:45px;
+font-weight:900;
+margin-bottom:10px;
+}
+
+.sub{
+text-align:center;
+color:#00ff66;
+font-size:28px;
+margin-bottom:25px;
+}
+
+input{
+width:100%;
+height:65px;
+background:#111;
+border:none;
+outline:none;
+border-radius:18px;
+padding:15px;
+color:white;
+font-size:24px;
+margin-bottom:18px;
+}
+
+button{
+width:100%;
+height:70px;
+border:none;
+border-radius:20px;
+font-size:30px;
+font-weight:bold;
+cursor:pointer;
+margin-bottom:18px;
+transition:0.2s;
+}
+
+button:active{
+transform:scale(0.97);
+}
+
+.vip-btn{
+background:#00ff55;
+color:black;
+}
+
+.gerar-btn{
+background:#00ff55;
+color:black;
+}
+
+.resultado{
+background:#111;
+height:70px;
+border-radius:18px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:0 20px;
+font-size:28px;
+margin-bottom:15px;
+}
+
+.titulo-vip{
+text-align:center;
+font-size:45px;
+font-weight:bold;
+color:#00ff55;
+margin-top:35px;
+margin-bottom:20px;
+}
+
+.card{
+background:#111;
+border-radius:30px;
+padding:30px;
+margin-bottom:25px;
+border:1px solid #333;
+}
+
+.card h2{
+text-align:center;
+font-size:38px;
+margin-bottom:20px;
+}
+
+.card p{
+font-size:27px;
+margin-bottom:15px;
+}
+
+.btn-card{
+background:#00ff55;
+height:70px;
+border-radius:18px;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:30px;
+font-weight:bold;
+color:black;
+margin-top:25px;
+}
+
+.whats{
+background:#00ff55;
+color:black;
+font-size:30px;
+font-weight:bold;
+}
+
+.vip-page{
+display:none;
+}
+
+.vip-title{
+text-align:center;
+font-size:42px;
+margin-bottom:10px;
+}
+
+.vip-sub{
+text-align:center;
+color:#00ff55;
+font-size:24px;
+margin-bottom:25px;
+}
+
+.voltar{
+background:#111;
+color:white;
+border:1px solid #00ff55;
+margin-top:10px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<img src="https://i.imgur.com/3ZQ3Z6v.png" class="logo">
+
+<div id="freePage">
+
+<h1>BRISA SENSE FREE</h1>
+
+<div class="sub">✨ Gerador Aleatório</div>
+
+<input type="text" id="codigoVip" placeholder="Código VIP">
+
+<button class="vip-btn" onclick="ativarVIP()">
+ATIVAR VIP 👑
+</button>
+
+<button class="gerar-btn" onclick="gerarFree()">
+GERAR SENSI ALEATÓRIA 🔥
+</button>
+
+<div class="resultado">
+<span>Geral</span>
+<span id="geral">---</span>
+</div>
+
+<div class="resultado">
+<span>Ponto Vermelho</span>
+<span id="red">---</span>
+</div>
+
+<div class="resultado">
+<span>Mira 2x</span>
+<span id="m2">---</span>
+</div>
+
+<div class="resultado">
+<span>Mira 4x</span>
+<span id="m4">---</span>
+</div>
+
+<div class="resultado">
+<span>AWM</span>
+<span id="awm">---</span>
+</div>
+
+<div class="resultado">
+<span>Botão</span>
+<span id="botao">---</span>
+</div>
+
+<div class="titulo-vip">
+PLANO VIP 👑
+</div>
+
+<div class="card">
+<h2>FREE</h2>
+
+<p>✅ Gerador aleatório</p>
+<p>✅ Sensi básica</p>
+<p>❌ Modelo celular</p>
+<p>❌ Polegadas</p>
+
+<div class="btn-card">
+PLANO ATUAL
+</div>
+</div>
+
+<div class="card">
+<h2>VIP PREMIUM 🔥</h2>
+
+<p>✅ Sensi inteligente</p>
+<p>✅ Modelo do celular</p>
+<p>✅ Polegadas da tela</p>
+<p>✅ Melhor precisão</p>
+<p>✅ Suporte prioritário</p>
+
+<div class="btn-card">
+ATIVAR VIP
+</div>
+</div>
+
+<button class="whats"
+onclick="window.open('https://wa.me/5583998161803')">
+SUPORTE WHATSAPP 📱
+</button>
+
+</div>
+
+<div class="vip-page" id="vipPage">
+
+<h1 class="vip-title">BRISA VIP 👑</h1>
+
+<div class="vip-sub">
+✨ Sensi Inteligente
+</div>
+
+<input type="number" id="dpi" placeholder="Digite sua DPI">
+
+<input type="text" id="modelo" placeholder="Modelo do celular">
+
+<input type="number" id="polegadas" placeholder="Polegadas da tela">
+
+<button class="gerar-btn" onclick="gerarVIP()">
+GERAR SENSI VIP 🔥
+</button>
+
+<div class="resultado">
+<span>Geral</span>
+<span id="vgeral">---</span>
+</div>
+
+<div class="resultado">
+<span>Ponto Vermelho</span>
+<span id="vred">---</span>
+</div>
+
+<div class="resultado">
+<span>Mira 2x</span>
+<span id="vm2">---</span>
+</div>
+
+<div class="resultado">
+<span>Mira 4x</span>
+<span id="vm4">---</span>
+</div>
+
+<div class="resultado">
+<span>AWM</span>
+<span id="vawm">---</span>
+</div>
+
+<div class="resultado">
+<span>Botão</span>
+<span id="vbotao">---</span>
+</div>
+
+<button class="voltar" onclick="voltarFree()">
+VOLTAR
+</button>
+
+</div>
+
+</div>
+
+<script>
+
+const codigoVIP = "BRISA2025";
+
+function random(min,max){
+return Math.floor(Math.random() * (max-min+1)) + min;
+}
+
+function gerarFree(){
+
+document.getElementById("geral").innerHTML = random(120,200);
+document.getElementById("red").innerHTML = random(100,180);
+document.getElementById("m2").innerHTML = random(90,170);
+document.getElementById("m4").innerHTML = random(80,150);
+document.getElementById("awm").innerHTML = random(40,100);
+document.getElementById("botao").innerHTML = random(40,100) + "%";
+
+}
+
+function ativarVIP(){
+
+let codigo = document.getElementById("codigoVip").value;
+
+if(codigo === codigoVIP){
+
+alert("VIP ATIVADO COM SUCESSO 👑");
+
+document.getElementById("freePage").style.display = "none";
+document.getElementById("vipPage").style.display = "block";
+
+window.open(
+"https://api.telegram.org/bot8816858981:AAH4E7r-uTUs9Mo9v2JtkdRR4DMDVuEdg-c/sendMessage?chat_id=8930206232&text=Novo usuário ativou o VIP no BRISA SENSE 👑"
+);
+
+}else{
+
+alert("Código VIP inválido ❌");
+
+}
+
+}
+
+function gerarVIP(){
+
+let dpi = Number(document.getElementById("dpi").value);
+
+document.getElementById("vgeral").innerHTML = dpi - 180;
+document.getElementById("vred").innerHTML = dpi - 200;
+document.getElementById("vm2").innerHTML = dpi - 220;
+document.getElementById("vm4").innerHTML = dpi - 250;
+document.getElementById("vawm").innerHTML = dpi - 300;
+document.getElementById("vbotao").innerHTML = random(55,90) + "%";
+
+}
+
+function voltarFree(){
+
+document.getElementById("freePage").style.display = "block";
+document.getElementById("vipPage").style.display = "none";
+
+}
+
+</script>
+
+</body>
+</html>
